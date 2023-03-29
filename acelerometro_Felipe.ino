@@ -40,5 +40,40 @@ Serial.print("fim setup")
 
 void loop() {
   // put your main code here, to run repeatedly:
+ mpu6050.update();
+ anguloX = mpu6050.getanguloX();
+ anguloY = mpu6050.getanguloY();
+ anguloZ = mpu6050.getanguloZ();
 
+  if (anguloX >= 25){
+    digtalWrite (pinLedX,HIGH);
+    }else if (anguloX <= -25){
+    digtalWrite (pinLedX,HIGH);
+    else{
+        
+    digtalWrite(pinLedX,LOw);
+
+ if (anguloX >= 25){
+    digtalWrite (pinLedX,HIGH);
+    }else if (anguloX <= -25){
+    digtalWrite (pinLedX,HIGH);
+    else{
+        
+    digtalWrite(pinLedX,LOw);
+
+     if (anguloX >= 25){
+    digtalWrite (pinLedX,HIGH);
+    }else if (anguloX <= -25){
+    digtalWrite (pinLedX,HIGH);
+    else{
+        
+    digtalWrite(pinLedX,LOw);
+    }
+    
+
+    
+
+
+    
+    }
 }
